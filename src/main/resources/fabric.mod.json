@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "test-mod",
+	"version": "${version}",
+	"name": "Test mod",
+	"description": "Just a simple test mod",
+	"authors": [
+		"Opium.44"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/test-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"opium44.testmod.TestMod"
+		],
+		"client": [
+			"opium44.testmod.TestModClient"
+		],
+		"fabric-datagen": [
+			"opium44.testmod.TestModDataGenerator"
+		]
+	},
+	"mixins": [
+		"test-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
